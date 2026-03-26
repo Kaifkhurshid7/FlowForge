@@ -1,12 +1,12 @@
 export const theme = {
-  background: '#0F172A',
-  surface: '#1E293B',
-  surfaceStrong: '#111C34',
-  border: '#334155',
-  text: '#E2E8F0',
-  muted: '#94A3B8',
-  accent: '#8B5CF6',
-  grid: 'rgba(148, 163, 184, 0.18)',
+  background: '#F8FAFC',
+  surface: '#FFFFFF',
+  surfaceStrong: '#F1F5F9',
+  border: '#E2E8F0',
+  text: '#0F172A',
+  muted: '#64748B',
+  accent: '#4F46E5',
+  grid: 'rgba(79, 70, 229, 0.08)',
 };
 
 export const toolbarNodes = [
