@@ -43,11 +43,11 @@ export const useStore = create((set, get) => ({
             type: MarkerType.ArrowClosed,
             width: 18,
             height: 18,
-            color: '#8B5CF6',
+            color: '#4F46E5',
           },
           style: {
             strokeWidth: 2,
-            stroke: '#8B5CF6',
+            stroke: '#4F46E5',
           },
         },
         get().edges
