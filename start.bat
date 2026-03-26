@@ -1,0 +1,3 @@
+@echo off
+echo Starting FlowForge (Frontend + Backend)...
+npm run start
