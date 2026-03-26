@@ -12,8 +12,12 @@ export const SubmitButton = () => {
   return (
     <div className="submit-shell">
       {analysisResult && !isSubmitting && (
-        <div className={`submit-status ${analysisResult.is_dag ? 'valid' : 'invalid'}`}>
-          {analysisResult.is_dag ? '✓ DAG Valid' : '✕ Cycle Detected'}
+        <div
+          className={`submit-status ${analysisResult.is_dag ? 'valid' : 'invalid'}`}
+        >
+          <span className="status-text">
+            {analysisResult.is_dag ? 'Valid Workflow' : 'Circular Loop Detected'}
+          </span>
         </div>
       )}
       <button
@@ -22,7 +26,9 @@ export const SubmitButton = () => {
         onClick={submitPipeline}
         disabled={isSubmitting}
       >
-        {isSubmitting ? 'Analyzing...' : 'Submit Pipeline'}
+        <span className="btn-text">
+          {isSubmitting ? 'Analyzing...' : 'Submit Pipeline'}
+        </span>
       </button>
     </div>
   );
