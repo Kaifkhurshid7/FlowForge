@@ -2,6 +2,17 @@ from models import PipelineEdge, PipelineNode
 
 
 def is_dag(nodes: list[PipelineNode], edges: list[PipelineEdge]) -> bool:
+    """
+    Checks whether a given graph of nodes and edges is a Directed Acyclic Graph (DAG).
+    Uses Depth-First Search (DFS) for cycle detection.
+    
+    Args:
+        nodes: A list of Pydantic Node models.
+        edges: A list of Pydantic Edge models linking the nodes.
+        
+    Returns:
+        bool: True if the graph is a DAG, False if a cycle is detected.
+    """
     graph = {node.id: [] for node in nodes}
 
     for edge in edges:

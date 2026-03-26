@@ -3,6 +3,10 @@ import { PipelineUI } from './ui';
 import { SubmitButton } from './submit';
 import { ResultModal } from './components/Modal';
 
+/**
+ * Main application component that renders the FlowForge pipeline builder.
+ * Integrates React Flow with custom nodes, a toolbar, and a submission UI.
+ */
 function App() {
   return (
     <div className="app-shell">

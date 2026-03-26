@@ -22,6 +22,10 @@ def read_root():
 
 @app.post("/pipelines/parse", response_model=PipelineAnalysis)
 def parse_pipeline(payload: PipelinePayload) -> PipelineAnalysis:
+    """
+    Parses the submitted pipeline and returns analysis results.
+    Calculates node count, edge count, and DAG validity.
+    """
     return PipelineAnalysis(
         num_nodes=len(payload.nodes),
         num_edges=len(payload.edges),

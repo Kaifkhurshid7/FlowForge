@@ -3,6 +3,9 @@ import { useStore } from '../store';
 
 const selector = (state) => ({ updateNodeField: state.updateNodeField });
 
+/**
+ * Node for implementing branching logic in the pipeline.
+ */
 export const ConditionNode = ({ id, data }) => {
   const { updateNodeField } = useStore(selector);
 

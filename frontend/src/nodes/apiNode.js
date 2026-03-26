@@ -3,6 +3,9 @@ import { useStore } from '../store';
 
 const selector = (state) => ({ updateNodeField: state.updateNodeField });
 
+/**
+ * Node for making external API calls.
+ */
 export const ApiNode = ({ id, data }) => {
   const { updateNodeField } = useStore(selector);
 

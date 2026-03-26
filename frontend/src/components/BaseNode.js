@@ -1,5 +1,11 @@
 import { Handle, Position } from 'reactflow';
 
+/**
+ * Computes the vertical percentage offset for a handle based on its index and total count.
+ * @param {number} index - The index of the handle.
+ * @param {number} total - The total number of handles of this type.
+ * @returns {string} The CSS top property value.
+ */
 const getHandleOffset = (index, total) => {
   if (total <= 1) {
     return '50%';
@@ -8,6 +14,18 @@ const getHandleOffset = (index, total) => {
   return `${((index + 1) * 100) / (total + 1)}%`;
 };
 
+/**
+ * A reusable container for pipeline nodes that provides consistent styling,
+ * headers, and dynamic handle placement for inputs and outputs.
+ * 
+ * @param {Object} props
+ * @param {string} props.title - The primary label of the node.
+ * @param {string} props.subtitle - A short description of the node's function.
+ * @param {string} props.accent - A hex color used for the node's visual identity.
+ * @param {Array<{id: string, label: string}>} [props.inputs] - List of input handles.
+ * @param {Array<{id: string, label: string}>} [props.outputs] - List of output handles.
+ * @param {React.ReactNode} props.children - The body content of the node.
+ */
 export const BaseNode = ({
   title,
   subtitle,
